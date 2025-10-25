@@ -1,0 +1,177 @@
+/* StAuth10244: I Smriti Manandhar, 000922444 certify that this material is my original work.
+No other person's work has been used without due acknowledgement.
+I have not made my work available to anyone else. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #e8bbbb, #cde1eb);
+  background-attachment: fixed;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+  background: linear-gradient(to right, #6c63ff, #c470ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Deck placeholder */
+.deck-placeholder {
+  margin: 20px auto;
+  width: 220px;
+  height: 300px;
+  border-radius: 16px;
+  border: 2px dashed #aaa;
+  background: linear-gradient(135deg, #c3d9ff, #f4f0ff);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.deck-placeholder:hover {
+  background: linear-gradient(135deg, #a3bfff, #e8d4ff);
+  transform: scale(1.05);
+}
+
+/* Button controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0 8px;
+}
+
+.controls button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #6c63ff, #b46fff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #594ee3, #9f56e8);
+}
+
+.controls button:active {
+  transform: translateY(0);
+}
+
+.controls button:nth-child(1) {
+  background: linear-gradient(135deg, #28c76f, #81fbb8);
+  color: #033d20;
+}
+
+.controls button:nth-child(2) {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.controls button:nth-child(3) {
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  color: #5f0000;
+}
+
+.controls button:nth-child(4) {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+}
+
+.controls button:nth-child(5) {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #023f2f;
+}
+
+.controls button:nth-child(6) {
+  background: linear-gradient(135deg, #c471ed, #f64f59);
+}
+
+/* Card styles */
+.card-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.card {
+  width: 80px;
+  height: 110px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card .value {
+  font-size: 22px;
+}
+
+.card .suit {
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* Picked (selected) card border */
+.card[picked="true"] {
+  border: 3px solid gold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    width: 65px;
+    height: 95px;
+  }
+
+  .deck-placeholder {
+    width: 180px;
+    height: 240px;
+  }
+}
